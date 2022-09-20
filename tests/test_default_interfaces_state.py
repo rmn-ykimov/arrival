@@ -1,7 +1,5 @@
-import pytest
-from switcher import wifi
 from switcher import lte
-
+from switcher import wifi
 
 
 def test_wifi_default():
