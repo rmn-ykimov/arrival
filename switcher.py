@@ -1,28 +1,30 @@
 import os
 import wifi_credentials
-import ip
+import ip_values
 
 
 # Class which is describes name, state of device (on or off) and if the traffic transmission is active. This class also
 # contains functions for google_dns and host ping.
 class NetworkInterface:
-    def __init__(self, name, isactive, traffic_transmission):
+    def __init__(self, name, isactive, traffic_transmission, username, password):
         self.name = name
         self.isactive = isactive
         self.traffic_transmission = traffic_transmission
+        self.username = username
+        self.password = password
 
     @classmethod
     def google_response(cls):
-        return os.system("ping -c 60 " + ip.google_dns)
+        return os.system("ping -c 60 " + ip_values.google_dns)
 
     @classmethod
     def host_response(cls):
-        return os.system("ping -c 60 " + ip.host)
+        return os.system("ping -c 60 " + ip_values.host)
 
 
 # objects of the class (wi-fi and lte) and its initial state
-wifi = NetworkInterface("wlan1", True, True)
-lte = NetworkInterface("eth3", False, False)
+wifi = NetworkInterface("wlan1", True, True, wifi_credentials.username, wifi_credentials.password)
+lte = NetworkInterface("eth3", False, False, None, None)
 
 # if host is available
 if wifi.host_response() == 0:
