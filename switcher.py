@@ -1,11 +1,14 @@
+"""
+Module that contains network interface switcher's executable code
+"""
 import os
 import ip_values
 import wifi_credentials
 
 
-# Class which is describes name, state of device (on or off), username, password and if the traffic transmission is
-# active of network interface. This class also contains functions for google_dns and host ping.
 class NetworkInterface:
+    description = "Describes network device"
+
     def __init__(self, name, isactive, traffic_transmission, username, password):
         self.name = name
         self.isactive = isactive
@@ -15,20 +18,34 @@ class NetworkInterface:
 
     @classmethod
     def google_response(cls):
-        return os.system("ping -c 60 " + ip_values.google_dns)
+        """
+        Send ICMP packets to 8.8.8.8
+        """
+        return os.system("ping -c 60 " + ip_values.GOOGLE_DNS)
 
     @classmethod
     def host_response(cls):
-        return os.system("ping -c 60 " + ip_values.host)
+        """
+        Send ICMP packets to 35.242.186.249
+        """
+        return os.system("ping -c 60 " + ip_values.HOST)
 
 
 # Objects of the class (wi-fi and lte) and its initial state
-wifi = NetworkInterface("wlan1", True, True, wifi_credentials.username, wifi_credentials.password)
+wifi = NetworkInterface("wlan1", True, True, wifi_credentials.USERNAME, wifi_credentials.PASSWORD)
+"""
+Wi-Fi interface's initial state
+"""
 lte = NetworkInterface("eth3", False, False, None, None)
+"""
+LTE interface's initial state
+"""
 
 
-# The function which is describes conditions of switching between wi-fi and lte.
 def switching():
+    """
+    The function which is describes conditions of switching between wi-fi and lte.
+    """
     if wifi.host_response() == 0:
         wifi.traffic_transmission = True
     elif wifi.host_response() != 0:
