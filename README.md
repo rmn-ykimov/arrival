@@ -11,4 +11,4 @@ The scope is to cover critical scenarios of Network Interface Switch.
 
 ## Test Plan
 
-- [Network Interface Switch](docs/Network Interface Switch.md)
+- [Network Interface Switch](docs/Network_Interface_Switch.md)
