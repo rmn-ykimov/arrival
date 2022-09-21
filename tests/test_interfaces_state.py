@@ -8,7 +8,7 @@ from switcher import wifi
 
 def test_interfaces_active():
     """
-    The checking that at least one interface is active
+    Checking that at least one interface is active
     """
     if wifi.isactive is False:
         assert lte.isactive is True
@@ -21,7 +21,7 @@ def test_interfaces_active():
 
 def test_both_interfaces_inactive():
     """
-    The checking that excludes the situation when both interfaces are inactive
+    Checking that excludes the situation when both interfaces are inactive
     """
     with pytest.raises(AssertionError):
         assert wifi.isactive is False and lte.isactive is False
