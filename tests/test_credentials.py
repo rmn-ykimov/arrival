@@ -1,21 +1,23 @@
 """
 Module providing checking if network interface's credentials are valid
 """
+import allure
 import pytest
-import wifi_credentials
+from config.config import USERNAME, PASSWORD
 from switcher import lte
 from switcher import wifi
 
 
+@allure.title('Wi-Fi credentials')
 def test_wifi_credentials():
     """
     Checking that username and password for wi-fi are valid.
     """
-    assert wifi.username == wifi_credentials.USERNAME
-    assert wifi.password == wifi_credentials.PASSWORD
+    assert wifi.username == USERNAME
+    assert wifi.password == PASSWORD
 
 
-# Checking that lte password and username are valid.
+@allure.title('LTE credentials')
 def test_lte_credentials():
     """
     Checking that lte password and username are valid.
@@ -24,15 +26,17 @@ def test_lte_credentials():
     assert lte.password is None
 
 
+@allure.title('Wi-Fi credentials (negative)')
 @pytest.mark.xfail()
 def test_wifi_credentials_negative():
     """
     Checking that Wi-Fi credentials is not incorrect
     """
-    assert wifi.username != wifi_credentials.USERNAME
-    assert wifi.password != wifi_credentials.PASSWORD
+    assert wifi.username != USERNAME
+    assert wifi.password != PASSWORD
 
 
+@allure.title('LTE credentials (negative)')
 @pytest.mark.xfail()
 def test_lte_credentials_negative():
     """

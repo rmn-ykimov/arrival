@@ -5,9 +5,9 @@ from switcher import NetworkInterface
 
 
 @pytest.fixture
-@allure.title('Моя первая фикстура')
+@allure.title('Wi-Fi fixture')
 def get_class() -> dict:
-    """Тут должна быть док стринга с описание фикстуры"""
+    """Fixture which"""
     yield {
         'wifi': NetworkInterface("wlan1", True, True, USERNAME, PASSWORD),
         'lte': NetworkInterface("eth3", False, False, None, None)

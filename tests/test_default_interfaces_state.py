@@ -1,10 +1,13 @@
 """
 Module providing checking if default state of network interface's is valid
 """
+import allure
+
 from switcher import lte
 from switcher import wifi
 
 
+@allure.title('Wi-Fi defaults')
 def test_wifi_default():
     """
     Checking that default state of wi-fi interface is correct
@@ -14,6 +17,7 @@ def test_wifi_default():
     assert wifi.traffic_transmission is True
 
 
+@allure.title('LTE defaults')
 def test_lte_default():
     """
     Checking that default state of lte interface is correct

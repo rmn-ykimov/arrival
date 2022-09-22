@@ -1,11 +1,13 @@
 """
 Module providing checking of network interface's state
 """
+import allure
 import pytest
 from switcher import lte
 from switcher import wifi
 
 
+@allure.title('Interfaces active')
 def test_interfaces_active():
     """
     Checking that at least one interface is active
@@ -19,6 +21,7 @@ def test_interfaces_active():
         assert lte.is_active is True
 
 
+@allure.title('Interfaces inactive')
 def test_both_interfaces_inactive():
     """
     Checking that excludes the situation when both interfaces are inactive
