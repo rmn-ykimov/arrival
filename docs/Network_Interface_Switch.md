@@ -10,16 +10,18 @@
 
 ## Test cases
 
-| Test case name                 | Test case objective                                                    | 
-|--------------------------------|------------------------------------------------------------------------|
-| test_wifi_credentials          | Checking that username and password for wi-fi are valid                |
-| test_lte_credentials           | Checking that lte password and username are valid                      |
-| test_wifi_default              | Checking that default state of wi-fi interface is correct              |
-| test_lte_default               | Checking that default state of lte interface is correct                |
-| test_interfaces_active         | Checking that at least one interface is active                         |
-| test_both_interfaces_inactive  | Checking that excludes the situation when both interfaces are inactive |
-| test_google_dns_address        | Checking that google dns address is correct                            |
-| test_host_address              | Checking that host address is correct                                  |
+| Test case name                   | Test case objective                                                    | 
+|----------------------------------|------------------------------------------------------------------------|
+| test_wifi_credentials            | Checking that username and password for wi-fi are valid                |
+| test_lte_credentials             | Checking that lte password and username are valid                      |
+| test_wifi_default                | Checking that default state of wi-fi interface is correct              |
+| test_lte_default                 | Checking that default state of lte interface is correct                |
+| test_interfaces_active           | Checking that at least one interface is active                         |
+| test_both_interfaces_inactive    | Checking that excludes the situation when both interfaces are inactive |
+| test_google_dns_address          | Checking that google dns address is correct                            |
+| test_host_address                | Checking that host address is correct                                  |
+| test_google_dns_address_negative | Checking that google dns address is not incorrect                      |
+| test_host_address_negative       | Checking that host address is not incorrect                            |
 
 ## Autotest Cases
 
@@ -170,3 +172,39 @@ Validate host address.
 **Expected results:**
 
 test_host_address is passed.
+
+### Test case - test_google_dns_address_negative
+
+**Test case objective:**
+
+Check the Google dns address settings.
+
+**Test case description:**
+
+Validate google dns address. Assert stored IP address with incorrect one.
+
+**Test case steps:**
+
+1. Validate google dns address on compliance with "75.222.175.26" using `assert`.
+
+**Expected results:**
+
+test_google_dns_address_negative is passed.
+
+### Test case - test_host_address_negative
+
+**Test case objective:**
+
+Check the host address settings.
+
+**Test case description:**
+
+Validate host address. Assert stored IP address with incorrect one.
+
+**Test case steps:**
+
+1. Validate host address on compliance with "75.222.175.26" using `assert`.
+
+**Expected results:**
+
+test_host_address_negative is passed.

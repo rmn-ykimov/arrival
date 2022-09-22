@@ -2,7 +2,6 @@
 Module providing checking of ip addresses validity
 """
 import pytest
-
 import ip_values
 
 
@@ -21,16 +20,16 @@ def test_host_address():
 
 
 @pytest.mark.xfail()
-def test_dns_address_negative():
+def test_google_dns_address_negative():
     """
-    Checking that google dns address is not incorrect correct
+    Checking that google dns address is not incorrect
     """
     assert ip_values.GOOGLE_DNS == "75.222.175.26"
 
 
 @pytest.mark.xfail()
-def test_host_negative():
+def test_host_address_negative():
     """
-    Checking that host address is not incorrect correct
+    Checking that host address is not incorrect
     """
     assert ip_values.HOST == "75.222.175.26"
