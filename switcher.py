@@ -60,4 +60,5 @@ def switching():
             lte.isactive = False
             wifi.traffic_transmission = True
 
+
 switching()
