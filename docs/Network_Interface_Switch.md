@@ -14,6 +14,8 @@
 |----------------------------------|------------------------------------------------------------------------|
 | test_wifi_credentials            | Checking that username and password for wi-fi are valid                |
 | test_lte_credentials             | Checking that lte password and username are valid                      |
+| test_wifi_credentials_negative   | Checking that Wi-Fi credentials is not incorrect                       |
+| test_lte_credentials_negative    | Checking that LTE credentials is not incorrect                         |
 | test_wifi_default                | Checking that default state of wi-fi interface is correct              |
 | test_lte_default                 | Checking that default state of lte interface is correct                |
 | test_interfaces_active           | Checking that at least one interface is active                         |
@@ -26,6 +28,7 @@
 ## Autotest Cases
 
 ### Test case - test_wifi_credentials
+
 **Test case objective:**
 
 Check the wi-fi credentials on compliance with stored values.
@@ -59,6 +62,42 @@ Validate lte's username and password.
 **Expected results:**
 
 test_lte_credentials is passed.
+
+### Test case - test_wifi_credentials_negative
+
+**Test case objective:**
+
+Check the wi-fi credentials on compliance with stored values.
+
+**Test case description:**
+
+Validate variables from wifi_credentials.py.
+
+**Test case steps:**
+
+1. Validate that variables from wifi_credentials.py are not comply with data from method, using `assert`.
+
+**Expected results:**
+
+test_wifi_credentials_negative is passed.
+
+### Test case - test_lte_credentials_negative
+
+**Test case objective:**
+
+Check the lte credentials on compliance with stored values.
+
+**Test case description:**
+
+Validate variables from lte_credentials.py.
+
+**Test case steps:**
+
+1. Validate that variables for lte methods are not 'None' with data from method, using `assert`.
+
+**Expected results:**
+
+test_lte_credentials_negative is passed.
 
 ### Test case - test_wifi_default
 
