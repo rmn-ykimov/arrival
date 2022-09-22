@@ -10,7 +10,7 @@ def test_wifi_default():
     Checking that default state of wi-fi interface is correct
     """
     assert wifi.name == "wlan1"
-    assert wifi.isactive is True
+    assert wifi.is_active is True
     assert wifi.traffic_transmission is True
 
 
@@ -19,5 +19,5 @@ def test_lte_default():
     Checking that default state of lte interface is correct
     """
     assert lte.name == "eth3"
-    assert lte.isactive is False
+    assert lte.is_active is False
     assert lte.traffic_transmission is False

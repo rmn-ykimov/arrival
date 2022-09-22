@@ -2,7 +2,6 @@
 Module providing checking if network interface's credentials are valid
 """
 import pytest
-
 import wifi_credentials
 from switcher import lte
 from switcher import wifi
