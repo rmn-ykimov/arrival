@@ -12,7 +12,7 @@ from switcher import NetworkInterface
 @allure.title('Wi-Fi fixture')
 def get_wifi_object() -> dict:
     """Fixture which describes default Wi-Fi state"""
-    yield {
+    return {
         'wifi': NetworkInterface("wlan1", True, True, USERNAME, PASSWORD)
     }
 
@@ -21,6 +21,6 @@ def get_wifi_object() -> dict:
 @allure.title('LTE fixture')
 def get_lte_object() -> dict:
     """Fixture which describes default LTE state"""
-    yield {
+    return {
         'lte': NetworkInterface("eth3", False, False, None, None)
     }
