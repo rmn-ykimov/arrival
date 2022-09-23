@@ -5,7 +5,7 @@ from switcher import NetworkInterface
 
 
 @pytest.fixture
-@allure.title('Wi-Fi fixture')
+@allure.title('NetworkInterface fixture')
 def get_class() -> dict:
     """Fixture which"""
     yield {

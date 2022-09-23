@@ -4,6 +4,7 @@ Module providing checking if network interface's credentials are valid
 import allure
 import pytest
 from config.config import USERNAME, PASSWORD
+from switcher import NetworkInterface
 from switcher import lte
 from switcher import wifi
 

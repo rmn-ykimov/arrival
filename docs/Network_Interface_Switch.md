@@ -2,11 +2,11 @@
 
 ## Description
 
-| Filename              | Purpose or function                                                |
-|-----------------------|--------------------------------------------------------------------|
-| `switcher.py`         | Module that contains network interface switcher's executable code  |
-| `ip_values.py`        | Module that contains the information about target IPs              |
-| `wifi_credentials.py` | Module that contains the information about Wi-Fi credentials       |
+| Filename           | Purpose or function                                               |
+|--------------------|-------------------------------------------------------------------|
+| `switcher.py`      | Module that contains network interface switcher's executable code |
+| `ip_values.py`     | Module that contains the information about target IPs             |
+| `config/config.py` | Module that contains config information (credentials and IPs)     |
 
 ## Test cases
 

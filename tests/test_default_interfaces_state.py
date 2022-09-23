@@ -2,7 +2,6 @@
 Module providing checking if default state of network interface's is valid
 """
 import allure
-
 from switcher import lte
 from switcher import wifi
 
