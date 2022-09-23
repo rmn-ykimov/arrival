@@ -45,3 +45,10 @@ def test_lte_credentials_negative():
     """
     assert lte.username is not None
     assert lte.password is not None
+
+@allure.title('My test')
+def test_wifi_credentials(get_class: dict):
+    """Checking that username and password for wi-fi are valid."""
+    wifi: NetworkInterface = get_class['wifi']
+    assert_value(actual_value=wifi.username, expected_value=USERNAME)
+    assert_value(wifi.password, PASSWORD)
