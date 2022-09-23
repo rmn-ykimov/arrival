@@ -5,10 +5,18 @@ from switcher import NetworkInterface
 
 
 @pytest.fixture
-@allure.title('NetworkInterface fixture')
-def get_class() -> dict:
-    """Fixture which"""
+@allure.title('Wi-Fi fixture')
+def get_wifi_object() -> dict:
+    """Fixture which describes default Wi-Fi state"""
     yield {
-        'wifi': NetworkInterface("wlan1", True, True, USERNAME, PASSWORD),
+        'wifi': NetworkInterface("wlan1", True, True, USERNAME, PASSWORD)
+    }
+
+
+@pytest.fixture
+@allure.title('LTE fixture')
+def get_lte_object() -> dict:
+    """Fixture which describes default LTE state"""
+    yield {
         'lte': NetworkInterface("eth3", False, False, None, None)
     }
