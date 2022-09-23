@@ -3,6 +3,7 @@ Module providing fixtures for network interfaces
 """
 import allure
 import pytest
+
 from config.config import USERNAME, PASSWORD
 from switcher import NetworkInterface
 
