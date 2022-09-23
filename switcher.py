@@ -11,7 +11,8 @@ class NetworkInterface:
     """
     description = "Describes network interface"
 
-    def __init__(self, name, is_active, traffic_transmission, username, password):
+    def __init__(self, name, is_active, traffic_transmission, username,
+                 password):
         self.name = name
         self.is_active = is_active
         self.traffic_transmission = traffic_transmission
@@ -44,7 +45,8 @@ lte = NetworkInterface("eth3", False, False, None, None)
 
 def switching_cycle():
     """
-    The function which is describes conditions of switching between wi-fi and lte.
+    The function which is describes conditions of switching between wi-fi and
+    lte.
     """
     if wifi.host_response() == 0:
         wifi.traffic_transmission = True

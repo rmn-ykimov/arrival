@@ -24,7 +24,8 @@ def test_host_address():
 
 
 @allure.title('Google DNS address (negative)')
-@pytest.mark.parametrize('ip', ["75.222.175.26", "67.232.15.87", "57.212.12.94", "87.112.14.64"])
+@pytest.mark.parametrize('ip', ["75.222.175.26", "67.232.15.87",
+                                "57.212.12.94", "87.112.14.64"])
 def test_google_dns_negative(ip):
     """
     Checking that google dns address is not incorrect.
@@ -33,7 +34,8 @@ def test_google_dns_negative(ip):
 
 
 @allure.title('Host address (negative)')
-@pytest.mark.parametrize('ip', ["75.222.175.26", "67.232.15.87", "57.212.12.94", "87.112.14.64"])
+@pytest.mark.parametrize('ip', ["75.222.175.26", "67.232.15.87",
+                                "57.212.12.94", "87.112.14.64"])
 def test_host_address_negative(ip):
     """
     Checking that host address is not incorrect.
