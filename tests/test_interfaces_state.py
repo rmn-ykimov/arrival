@@ -3,8 +3,8 @@ Module providing checking of network interface's state
 """
 import allure
 import pytest
-from switcher import lte
-from switcher import wifi
+
+from switcher import wifi, lte
 
 
 @allure.title('Interfaces active')
