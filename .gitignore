@@ -1,2 +1,3 @@
 .pytest_cache
 .testsallure-results
+.allure-results
