@@ -2,12 +2,11 @@
 
 ## Description
 
-| Filename           | Purpose or function                                               |
-|--------------------|-------------------------------------------------------------------|
-| `switcher.py`      | Module that contains network interface switcher's executable code |
-| `ip_values.py`     | Module that contains the information about target IPs             |
-| `config/config.py` | Module that contains config information (credentials and IPs)     |
-
+| Filename             | Purpose or function                                               |
+|----------------------|-------------------------------------------------------------------|
+| `switcher.py`        | Module that contains network interface switcher's executable code |
+| `config/config.py`   | Module that contains config information (credentials and IPs)     |
+| `helper/__init__.py` | Module that contains helper function                              |
 ## Test cases
 
 | Test case name                   | Test case objective                                                    | 
@@ -224,7 +223,7 @@ Validate google dns address. Assert stored IP address with incorrect one.
 
 **Test case steps:**
 
-1. Validate google dns address on compliance with "75.222.175.26" using `assert`.
+1. Validate host address on compliance with values from dictionary using `assert`.
 
 **Expected results:**
 
@@ -242,7 +241,7 @@ Validate host address. Assert stored IP address with incorrect one.
 
 **Test case steps:**
 
-1. Validate host address on compliance with "75.222.175.26" using `assert`.
+1. Validate host address on compliance with values from dictionary using `assert`.
 
 **Expected results:**
 

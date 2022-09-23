@@ -31,7 +31,7 @@ def test_lte_credentials(get_lte_object: dict):
 
 @allure.title('Wi-Fi credentials (negative)')
 @pytest.mark.xfail
-def test_wifi_credentials(get_wifi_object: dict):
+def test_wifi_credentials_negative(get_wifi_object: dict):
     """
     Checking that Wi-Fi credentials is not incorrect.
     """
@@ -42,7 +42,7 @@ def test_wifi_credentials(get_wifi_object: dict):
 
 @allure.title('LTE credentials (negative)')
 @pytest.mark.xfail()
-def test_lte_credentials(get_lte_object: dict):
+def test_lte_credentials_negative(get_lte_object: dict):
     """
     Checking that LTE credentials is not incorrect.
     """
